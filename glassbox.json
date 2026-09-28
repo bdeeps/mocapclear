@@ -1,0 +1,124 @@
+{
+  "slug": "mocapclear",
+  "box": 63,
+  "date": "2026-10-21",
+  "title": "MocapClear",
+  "question": "How does motion capture work?",
+  "hook": "A mocap camera never sees the actor, only bright dots on black. Walk a faceless performer through a ring of infrared cameras, cross the rays that pin each marker to a fraction of a millimetre, hand the motion to a four-armed creature, solve a face from helmet-camera dots, and watch an inertial suit drift away.",
+  "thumbText": "HOW MOCAP WORKS",
+  "field": "film",
+  "minutes": 14,
+  "tags": [
+    "motion capture",
+    "mocap",
+    "performance capture",
+    "optical motion capture",
+    "reflective markers",
+    "infrared cameras",
+    "triangulation",
+    "occlusion",
+    "retargeting",
+    "foot slide",
+    "skeleton solving",
+    "facial capture",
+    "head-mounted camera",
+    "blend shapes",
+    "data glove",
+    "inertial motion capture",
+    "IMU",
+    "drift",
+    "markerless motion capture",
+    "pose estimation",
+    "virtual camera",
+    "Andy Serkis",
+    "Gollum",
+    "Avatar",
+    "Kochadaiiyaan",
+    "animation",
+    "film",
+    "three.js"
+  ],
+  "explainer": [
+    {
+      "title": "The capture volume",
+      "text": "Optical mocap happens on a stage ringed by 12 to 48 infrared cameras. The performer wears 40 to 60 markers covered in retroreflective tape, which bounce the cameras' infrared light straight back. Each camera sees only bright dots on black and sends their 2D centres, about 120 times a second."
+    },
+    {
+      "title": "Where rays meet",
+      "text": "One camera only gives a direction to a dot: a ray. Two or more rays from different angles cross at the marker's 3D position. Centres found to a fraction of a pixel place a still marker to well under a millimetre (0.15 mm in one lab test). When an arm hides a marker from all but one camera, there is a gap."
+    },
+    {
+      "title": "Dots to a creature",
+      "text": "Software names every dot (labelling), fits a skeleton inside them (solving), then copies the joint rotations onto a creature (retargeting). If the creature's legs are longer but its body travels the actor's distance, its planted feet slide. Scaling the travel or locking the feet fixes it."
+    },
+    {
+      "title": "Faces and fingers",
+      "text": "A head-mounted camera watches dots on the face. A facial solver finds the mix of blend shapes (jaw open, smile, brows up) that explains how the dots moved, and those weights drive the creature's face, even remapped to ears. Gloves with bend sensors capture fingers."
+    },
+    {
+      "title": "Other ways to capture",
+      "text": "Inertial suits use about 17 motion sensors and work anywhere, but position comes from adding up acceleration twice, so it drifts unless planted feet reset it. Markerless systems find body keypoints in ordinary video with machine learning, and phones capture faces with 30,000 infrared dots."
+    },
+    {
+      "title": "On set and cleanup",
+      "text": "In performance capture, a tracked virtual camera shows the director the creature live in its world. Afterwards, gaps are filled with smooth curves and jitter is filtered out, but heavy smoothing flattens real motion. Animators then polish, for films shot by shot and for games as loops."
+    }
+  ],
+  "concepts": [
+    {
+      "term": "Motion capture",
+      "def": "Recording a real performer's movement so a digital character can move the same way."
+    },
+    {
+      "term": "Retroreflective marker",
+      "def": "A small ball with tape that bounces light straight back to the camera that lit it."
+    },
+    {
+      "term": "Triangulation",
+      "def": "Finding a point in 3D from where rays from two or more cameras cross."
+    },
+    {
+      "term": "Occlusion",
+      "def": "When a body part or object hides a marker from a camera."
+    },
+    {
+      "term": "Solving",
+      "def": "Fitting a skeleton inside the labelled markers to get joint rotations."
+    },
+    {
+      "term": "Retargeting",
+      "def": "Copying motion from one skeleton onto a body with different proportions."
+    },
+    {
+      "term": "Blend shape",
+      "def": "A saved face expression mixed in by a weight from 0 to 1."
+    },
+    {
+      "term": "IMU",
+      "def": "A tiny gyroscope, accelerometer and compass that measures how a body part moves."
+    },
+    {
+      "term": "Performance capture",
+      "def": "Capturing body, face and voice together so the whole acting performance is kept."
+    }
+  ],
+  "links": {},
+  "storage": [
+    {
+      "key": "mocapclear.v1",
+      "what": "Which chapters you have opened, your best quiz scores, and sound on or off."
+    }
+  ],
+  "credits": [
+    {
+      "name": "three.js",
+      "license": "MIT",
+      "url": "https://threejs.org"
+    },
+    {
+      "name": "Geist, Instrument Serif",
+      "license": "SIL OFL 1.1",
+      "url": "https://openfontlicense.org"
+    }
+  ]
+}

@@ -1,0 +1,776 @@
+{
+  "title": "The history of motion capture",
+  "tagline": "From a galloping horse and a man in a striped suit to creatures that act live on set: 150 years of turning movement into numbers.",
+  "intro": "People first studied movement with photographs, then traced it by hand. Psychologists showed that a few moving dots are enough to see a person. Gait labs, games and then films built systems that turn those dots into 3D skeletons, and actors learned to perform creatures. Today capture works outdoors, underwater, and with no suit at all.",
+  "eras": [
+    {
+      "id": "roots",
+      "name": "Photographing and tracing motion",
+      "from": 1878,
+      "to": 1972,
+      "color": "#c49bff",
+      "summary": "Muybridge and Marey take movement apart with cameras. Marey's black suit with white lines is the first marker suit. Fleischer and Disney trace real performers onto drawn characters."
+    },
+    {
+      "id": "dots",
+      "name": "Dots, lights and computers",
+      "from": 1973,
+      "to": 1998,
+      "color": "#ffb547",
+      "summary": "Johansson shows a few moving lights read as a person. Labs and gait clinics build camera systems that triangulate markers, and games and adverts start using them."
+    },
+    {
+      "id": "perf",
+      "name": "Performance capture",
+      "from": 1999,
+      "to": 2010,
+      "color": "#ff7a59",
+      "summary": "Mocap drives main characters. Gollum makes it acting, The Polar Express shoots a whole film on a stage, and Avatar adds head-mounted cameras and a virtual camera."
+    },
+    {
+      "id": "anywhere",
+      "name": "Capture anywhere",
+      "from": 2011,
+      "to": 2026,
+      "color": "#8ec5ff",
+      "summary": "Capture moves outdoors and underwater, game engines make it real time, and machine learning finds poses in ordinary video and phones."
+    }
+  ],
+  "events": [
+    {
+      "year": 1878,
+      "date": "June 1878",
+      "era": "roots",
+      "art": "horse",
+      "key": true,
+      "title": "A galloping horse, frozen in 12 photos",
+      "who": "Eadweard Muybridge, for Leland Stanford",
+      "where": "Palo Alto, California, USA",
+      "country": "USA",
+      "text": "Muybridge lined up a row of cameras beside a racetrack. Threads across the track fired the shutters one after another as the horse ran past, catching each phase of its stride.",
+      "why": "It proved that a camera could take movement apart, and showed that all four hooves leave the ground at once.",
+      "sources": [
+        1,
+        35
+      ]
+    },
+    {
+      "year": 1882,
+      "date": "1882",
+      "era": "roots",
+      "art": "filmreel",
+      "title": "A camera shaped like a rifle",
+      "who": "Étienne-Jules Marey",
+      "where": "Paris, France",
+      "country": "France",
+      "text": "Marey, a doctor who studied how animals move, built a chronophotographic gun that took 12 pictures a second, all from one viewpoint, to study birds in flight.",
+      "why": "Measuring motion from many timed pictures is exactly what a mocap camera still does, only faster.",
+      "sources": [
+        2
+      ]
+    },
+    {
+      "year": 1883,
+      "date": "1883",
+      "era": "roots",
+      "art": "mocap",
+      "key": true,
+      "title": "The first marker suit",
+      "who": "Étienne-Jules Marey",
+      "where": "Paris, France",
+      "country": "France",
+      "text": "Marey dressed a man in black with thin white stripes and dots along his arms and legs, then photographed him walking and running in front of a black wall. Only the white lines showed, so each photo became a moving stick figure.",
+      "why": "Black suit, bright marks, dark background: it is the idea behind every optical marker suit today.",
+      "box": "volume",
+      "sources": [
+        3,
+        2
+      ]
+    },
+    {
+      "year": 1915,
+      "date": "1915 (patent granted 9 October 1917)",
+      "era": "roots",
+      "art": "projector",
+      "key": true,
+      "title": "The rotoscope",
+      "who": "Max Fleischer, with his brother Dave",
+      "where": "New York, USA",
+      "country": "USA",
+      "text": "Fleischer projected film of a real person, one frame at a time, onto glass and traced it onto paper. Dave Fleischer, dressed as a clown, was the reference for Koko the Clown in Out of the Inkwell.",
+      "why": "Copying a real performer's movement into a drawn character is the goal of motion capture, done by hand.",
+      "sources": [
+        4
+      ]
+    },
+    {
+      "year": 1937,
+      "date": "1937",
+      "era": "roots",
+      "art": "storyboard",
+      "title": "Real dancers behind Snow White",
+      "who": "Walt Disney Productions",
+      "where": "Burbank, California, USA",
+      "country": "USA",
+      "text": "After Fleischer's patent ran out, Disney animators filmed live actors and used rotoscoping as reference for Snow White and the Prince, to make their movement look human.",
+      "why": "It showed that audiences read real human motion as more believable, a big reason mocap exists.",
+      "sources": [
+        4,
+        34
+      ]
+    },
+    {
+      "year": 1973,
+      "date": "1973",
+      "era": "dots",
+      "art": "mocap",
+      "key": true,
+      "title": "A person made of 10 to 12 lights",
+      "who": "Gunnar Johansson",
+      "where": "Uppsala, Sweden",
+      "country": "Sweden",
+      "text": "Johansson fixed small lights to an actor's main joints and filmed them moving in the dark. When the dots were still, viewers saw a random pattern. The moment they moved, people instantly saw someone walking, running or dancing.",
+      "why": "It proved that a few moving points hold most of what we read in body movement, which is why a few dozen markers can capture a performance.",
+      "box": "solve",
+      "sources": [
+        5,
+        6,
+        30
+      ]
+    },
+    {
+      "year": 1983,
+      "date": "April 1983",
+      "era": "dots",
+      "art": "wireframe",
+      "key": true,
+      "title": "The Graphical Marionette",
+      "who": "Carol Ginsberg and Delle Maxwell, MIT",
+      "where": "Cambridge, Massachusetts, USA",
+      "country": "USA",
+      "text": "A performer wore a suit with LEDs on the joints. Two cameras with special light sensors each reported the 2D position of every LED, and a computer combined them into 3D points that drove a stick figure live.",
+      "why": "It was triangulation from two cameras driving a digital character, the core of optical mocap.",
+      "box": "triangulate",
+      "sources": [
+        7
+      ]
+    },
+    {
+      "year": 1984,
+      "date": "1984 (first product 1979)",
+      "era": "dots",
+      "art": "skeleton",
+      "title": "Measuring how children walk",
+      "who": "Vicon, Oxford Metrics (Julian Morris and team)",
+      "where": "Oxford, England, UK",
+      "country": "UK",
+      "text": "Vicon's early camera systems were built for clinical gait analysis: measuring how children with cerebral palsy walk before and after surgery. Hospitals and universities helped set standard ways of placing markers.",
+      "why": "Medicine came first. The marker sets and methods that films use grew out of gait labs.",
+      "sources": [
+        8,
+        9
+      ]
+    },
+    {
+      "year": 1985,
+      "date": "January 1985",
+      "era": "dots",
+      "art": "cinema",
+      "title": "A shiny robot in a Super Bowl ad",
+      "who": "Robert Abel and Associates",
+      "where": "Los Angeles, USA",
+      "country": "USA",
+      "text": "For the advert Brilliance, the team filmed a real actress with reference points marked on her body, and a computer tracked those points to move a chrome computer-graphics robot.",
+      "why": "It was one of the first times captured human motion drove a CG character on television.",
+      "sources": [
+        10,
+        11
+      ]
+    },
+    {
+      "year": 1990,
+      "date": "1990",
+      "era": "dots",
+      "art": "xray",
+      "title": "Skeletons through an X-ray screen",
+      "who": "Total Recall visual effects team",
+      "where": "Los Angeles, USA",
+      "country": "USA",
+      "text": "For the scene where people walk behind an airport X-ray scanner, the team recorded the actors with motion capture to animate glowing CG skeletons. Accounts differ on how much of the capture data ended up in the final shots.",
+      "why": "It is often named as an early feature-film use of motion capture.",
+      "sources": [
+        0
+      ]
+    },
+    {
+      "year": 1994,
+      "date": "1993–1994",
+      "era": "dots",
+      "art": "digital",
+      "title": "Fighters that move like people",
+      "who": "Sega AM2",
+      "where": "Tokyo, Japan",
+      "country": "Japan",
+      "text": "Sega's arcade games Virtua Fighter and Virtua Fighter 2 used motion capture to animate their 3D fighters. Soon many studios built their own capture stages for games.",
+      "why": "Games became one of the biggest users of mocap, and still are.",
+      "sources": [
+        0,
+        33
+      ]
+    },
+    {
+      "year": 1999,
+      "date": "1999",
+      "era": "perf",
+      "art": "greenscreen",
+      "title": "A main character from mocap",
+      "who": "Ahmed Best and Industrial Light & Magic",
+      "where": "London, UK and San Rafael, USA",
+      "country": "USA",
+      "text": "Star Wars: Episode I featured Jar Jar Binks, the first main character in a feature film created with motion capture from an actor's performance.",
+      "why": "Mocap moved from background extras to a leading role.",
+      "sources": [
+        0
+      ]
+    },
+    {
+      "year": 2000,
+      "date": "28 January 2000",
+      "era": "perf",
+      "art": "filmreel",
+      "key": true,
+      "title": "A whole film made with mocap, animated in Chennai",
+      "who": "Pentafour Software (later Pentamedia Graphics)",
+      "where": "Chennai (then Madras), India, and Los Angeles, USA",
+      "country": "India",
+      "text": "Sinbad: Beyond the Veil of Mists was the first feature-length computer-animated film made with motion capture. Actors were captured in Los Angeles in 1997, and a couple of hundred animators in Madras built the film.",
+      "why": "An Indian studio led the first full-length mocap film, years before Hollywood's big ones.",
+      "sources": [
+        12,
+        0
+      ]
+    },
+    {
+      "year": 2001,
+      "date": "July 2001",
+      "era": "perf",
+      "art": "digital",
+      "title": "Realistic digital humans",
+      "who": "Square Pictures",
+      "where": "Honolulu, Hawaii, USA",
+      "country": "USA",
+      "text": "Final Fantasy: The Spirits Within aimed for photorealistic human characters, animated with motion capture. It was the first widely released film made this way.",
+      "why": "It showed how hard it is to make digital humans feel alive, even with real motion.",
+      "sources": [
+        0,
+        32
+      ]
+    },
+    {
+      "year": 2002,
+      "date": "December 2002",
+      "era": "perf",
+      "art": "mocap",
+      "key": true,
+      "title": "Gollum and Andy Serkis",
+      "who": "Andy Serkis and Weta Digital",
+      "where": "Wellington, New Zealand",
+      "country": "New Zealand",
+      "text": "Serkis acted Gollum on set with the other actors, then again in a marker suit on a capture stage. In The Two Towers his body motion streamed live onto the CG Gollum; animators used his face and voice as the guide for Gollum's face.",
+      "why": "It turned mocap into acting. People began to talk about performance capture and the actor behind the creature.",
+      "box": "onset",
+      "sources": [
+        13,
+        0,
+        29
+      ]
+    },
+    {
+      "year": 2004,
+      "date": "November 2004",
+      "era": "perf",
+      "art": "cinema",
+      "key": true,
+      "title": "A whole film shot on a capture stage",
+      "who": "Robert Zemeckis, Sony Pictures Imageworks and Vicon",
+      "where": "Culver City, California, USA",
+      "country": "USA",
+      "text": "The Polar Express used 72 cameras around a capture area about 10 feet (3 m) square. Up to four actors were captured together, bodies and faces: each wore about 48 body markers and 152 small face markers.",
+      "why": "It was the first film shot entirely on a motion-capture stage, and showed face capture's promise and problems.",
+      "box": "face",
+      "sources": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 2005,
+      "date": "December 2005",
+      "era": "perf",
+      "art": "mocap",
+      "title": "Kong's face from 135 markers",
+      "who": "Andy Serkis and Weta Digital",
+      "where": "Wellington, New Zealand",
+      "country": "New Zealand",
+      "text": "For King Kong, Serkis studied gorillas at London Zoo and in Rwanda. He had 135 small markers glued to his face, about two hours of make-up a day, to drive the ape's expressions.",
+      "why": "Face markers mapped a human face onto a very different creature face, a big step in retargeting.",
+      "box": "face",
+      "sources": [
+        16
+      ]
+    },
+    {
+      "year": 2009,
+      "date": "December 2009",
+      "era": "perf",
+      "art": "studio",
+      "key": true,
+      "title": "Head rigs and a virtual camera",
+      "who": "James Cameron, Lightstorm and Weta Digital",
+      "where": "Los Angeles, USA and Wellington, New Zealand",
+      "country": "USA",
+      "text": "For Avatar, actors wore skull caps with a tiny camera on a boom in front of the face, instead of hundreds of glued markers. Cameron used a virtual camera to see the Na'vi in Pandora live, on a capture stage described as six times larger than any before.",
+      "why": "The head-mounted camera and virtual camera became standard tools of performance capture.",
+      "box": "onset",
+      "sources": [
+        26
+      ]
+    },
+    {
+      "year": 2011,
+      "date": "August 2011",
+      "era": "anywhere",
+      "art": "clapper",
+      "key": true,
+      "title": "Apes captured outdoors",
+      "who": "Weta Digital, with Andy Serkis as Caesar",
+      "where": "Vancouver, Canada and San Francisco, USA",
+      "country": "Canada",
+      "text": "Rise of the Planet of the Apes took performance capture out of the studio onto real locations, including a battle on a Golden Gate Bridge set. A camera that could see the capture markers in daylight made it possible.",
+      "why": "Mocap no longer needed a dark stage; creatures could act beside live actors on real sets.",
+      "sources": [
+        17,
+        0
+      ]
+    },
+    {
+      "year": 2014,
+      "date": "23 May 2014",
+      "era": "anywhere",
+      "art": "cinema",
+      "key": true,
+      "title": "India's first photorealistic mocap film",
+      "who": "Soundarya Rajinikanth, with Rajinikanth",
+      "where": "Chennai, India, and Pinewood Studios, London, UK",
+      "country": "India",
+      "text": "Kochadaiiyaan was captured at the Centroid lab at Pinewood Studios with 48 cameras, and Rajinikanth performed his triple role in a marker suit. Big Indian effects films such as Ra.One (2011) and Baahubali (2015) also leaned on VFX, though published accounts say little about how much mocap each used.",
+      "why": "It was billed as India's first photorealistic motion-capture feature.",
+      "sources": [
+        18
+      ]
+    },
+    {
+      "year": 2016,
+      "date": "July 2016",
+      "era": "anywhere",
+      "art": "digital",
+      "title": "From capture to final shot in minutes",
+      "who": "Ninja Theory, Epic Games, Cubic Motion and 3Lateral",
+      "where": "Anaheim, California, USA (SIGGRAPH)",
+      "country": "UK",
+      "text": "On stage at SIGGRAPH, actress Melina Juergens performed as Senua from the game Hellblade. Her body and face were captured and rendered live in a game engine, then cut into a finished scene in minutes. It won Best Real-Time Graphics and Interactivity.",
+      "why": "Game engines made real-time performance capture good enough to be close to final.",
+      "sources": [
+        19
+      ]
+    },
+    {
+      "year": 2017,
+      "date": "2017",
+      "era": "anywhere",
+      "art": "pixels",
+      "key": true,
+      "title": "OpenPose: skeletons from any video",
+      "who": "Zhe Cao, Yaser Sheikh and team, Carnegie Mellon University",
+      "where": "Pittsburgh, USA",
+      "country": "USA",
+      "text": "OpenPose was the first open-source system to find the body keypoints of many people in ordinary video in real time, using deep learning and part affinity fields.",
+      "why": "It started the markerless wave: pose from video, no suit.",
+      "box": "methods",
+      "sources": [
+        20
+      ]
+    },
+    {
+      "year": 2017,
+      "date": "November 2017",
+      "era": "anywhere",
+      "art": "phone",
+      "title": "Face capture in a phone",
+      "who": "Apple",
+      "where": "Cupertino, California, USA",
+      "country": "USA",
+      "text": "The iPhone X's TrueDepth camera projects over 30,000 invisible infrared dots onto the face. Apple's ARKit turns them into 52 blend-shape weights, such as jaw open and brow up, many times a second.",
+      "why": "Facial capture that once needed a studio became something anyone could try at home.",
+      "box": "methods",
+      "sources": [
+        22
+      ]
+    },
+    {
+      "year": 2020,
+      "date": "June 2020",
+      "era": "anywhere",
+      "art": "chip",
+      "title": "33 body points on a phone",
+      "who": "Valentin Bazarevsky and team, Google Research",
+      "where": "Mountain View, California, USA",
+      "country": "USA",
+      "text": "BlazePose found 33 body landmarks in real time on a mobile phone, using only its ordinary camera.",
+      "why": "Markerless capture shrank from a computer lab to a pocket.",
+      "box": "methods",
+      "sources": [
+        21
+      ]
+    },
+    {
+      "year": 2020,
+      "date": "2020",
+      "era": "anywhere",
+      "art": "scales",
+      "title": "How accurate is markerless?",
+      "who": "Nakano and colleagues",
+      "where": "Japan",
+      "country": "Japan",
+      "text": "A study compared OpenPose with several video cameras against a marker system. About 80% of joint errors were under 30 mm, but some were over 40 mm. Markers still win when millimetres matter.",
+      "why": "It measured the trade-off: markerless is easy and cheap, optical is precise.",
+      "box": "methods",
+      "sources": [
+        28
+      ]
+    },
+    {
+      "year": 2021,
+      "date": "January 2021 (film released June 2023)",
+      "era": "anywhere",
+      "art": "mocap",
+      "title": "Inertial suits on an Indian epic",
+      "who": "Om Raut and team, Adipurush",
+      "where": "India",
+      "country": "India",
+      "text": "The motion-capture shoot for Adipurush began in January 2021 with Xsens inertial suits for the body, and a separate head-mounted system for faces.",
+      "why": "Inertial suits let big Indian productions capture without a huge optical stage.",
+      "box": "methods",
+      "sources": [
+        27,
+        31
+      ]
+    },
+    {
+      "year": 2022,
+      "date": "December 2022",
+      "era": "anywhere",
+      "art": "waterdrop",
+      "key": true,
+      "title": "Performance capture underwater",
+      "who": "James Cameron, Lightstorm and Wētā FX",
+      "where": "Manhattan Beach Studios, California, USA",
+      "country": "USA",
+      "text": "For Avatar: The Way of Water, the team captured actors underwater in a huge tank built at Manhattan Beach Studios (reports of its size vary). Air bubbles act as tiny wiggling mirrors that fool the cameras, so actors and crew held their breath while performing.",
+      "why": "Capture moved into places once thought impossible for optical systems.",
+      "sources": [
+        25
+      ]
+    }
+  ],
+  "firsts": [
+    {
+      "label": "Stop-action photos of a galloping horse",
+      "value": "1878",
+      "who": "Eadweard Muybridge, Palo Alto, USA"
+    },
+    {
+      "label": "Suit with bright marks on a black body",
+      "value": "1883",
+      "who": "Étienne-Jules Marey, Paris, France"
+    },
+    {
+      "label": "Rotoscope (tracing live action)",
+      "value": "1915",
+      "who": "Max Fleischer, New York, USA"
+    },
+    {
+      "label": "Point-light walker experiments",
+      "value": "1973",
+      "who": "Gunnar Johansson, Uppsala, Sweden"
+    },
+    {
+      "label": "Feature-length film made with mocap",
+      "value": "2000",
+      "who": "Sinbad: Beyond the Veil of Mists, Pentafour, Chennai and Los Angeles"
+    },
+    {
+      "label": "Feature film shot entirely on a capture stage",
+      "value": "2004",
+      "who": "The Polar Express, Sony Pictures Imageworks and Vicon"
+    },
+    {
+      "label": "India's first photorealistic mocap feature",
+      "value": "2014",
+      "who": "Kochadaiiyaan"
+    }
+  ],
+  "people": [
+    {
+      "name": "Étienne-Jules Marey",
+      "life": "1830 – 1904",
+      "role": "Physiologist and inventor",
+      "from": "France",
+      "note": "Dressed a man in black with white stripes to photograph movement as a stick figure."
+    },
+    {
+      "name": "Max Fleischer",
+      "life": "1883 – 1972",
+      "role": "Animator and inventor",
+      "from": "Austria-Hungary and USA",
+      "note": "Invented the rotoscope to trace real motion into cartoons."
+    },
+    {
+      "name": "Gunnar Johansson",
+      "life": "1911 – 1998",
+      "role": "Psychologist",
+      "from": "Sweden",
+      "note": "Showed that a dozen moving lights are enough to see a person walking."
+    },
+    {
+      "name": "Andy Serkis",
+      "life": "born 1964",
+      "role": "Actor and director",
+      "from": "UK",
+      "note": "Played Gollum, Kong and Caesar, and made performance capture a craft of acting."
+    },
+    {
+      "name": "Rajinikanth",
+      "life": "born 1950",
+      "role": "Actor",
+      "from": "India",
+      "note": "Performed a triple role in a marker suit for Kochadaiiyaan, India's first photorealistic mocap film."
+    }
+  ],
+  "series": [
+    {
+      "id": "cameras",
+      "title": "Cameras watching the performers",
+      "unit": "cameras",
+      "log": false,
+      "after": "perf",
+      "caption": "Two light sensors in 1983 grew to dozens of cameras on big film stages (SIGGRAPH, AWN, Wikipedia).",
+      "points": [
+        {
+          "year": 1983,
+          "value": 2,
+          "label": "Graphical Marionette (MIT): 2 cameras"
+        },
+        {
+          "year": 2004,
+          "value": 72,
+          "label": "The Polar Express: 72 cameras"
+        },
+        {
+          "year": 2012,
+          "value": 48,
+          "label": "Kochadaiiyaan shoot at Pinewood: 48 cameras"
+        }
+      ]
+    }
+  ],
+  "facts": [
+    "A mocap camera does not record a picture of the actor. It sends only the centres of bright dots, often 120 times a second or more.",
+    "A lab test of one optical system measured an average error of just 0.15 mm for a still marker.",
+    "Johansson's viewers recognised a walking person from about a dozen moving lights, but saw only random dots when the lights stood still.",
+    "On The Polar Express, each actor wore about 200 markers, 152 of them on the face, and 72 cameras watched up to four actors at once.",
+    "An iPhone's face camera projects more than 30,000 invisible dots to measure the shape of your face."
+  ],
+  "sources": [
+    {
+      "title": "Motion capture",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Motion_capture"
+    },
+    {
+      "title": "The Horse in Motion",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Horse_in_Motion"
+    },
+    {
+      "title": "Étienne-Jules Marey",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/%C3%89tienne-Jules_Marey"
+    },
+    {
+      "title": "Étienne-Jules Marey, Joinville Soldier Walking",
+      "publisher": "Smarthistory",
+      "url": "https://smarthistory.org/marey-joinville-soldier-walking/"
+    },
+    {
+      "title": "Rotoscoping",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rotoscoping"
+    },
+    {
+      "title": "Johansson, G. (1973). Visual perception of biological motion and a model for its analysis. Perception & Psychophysics 14",
+      "publisher": "Springer",
+      "url": "https://link.springer.com/article/10.3758/BF03212378"
+    },
+    {
+      "title": "Biological motion",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Biological_motion"
+    },
+    {
+      "title": "A Brief History of Motion Capture for Computer Character Animation",
+      "publisher": "ACM SIGGRAPH Education (HyperGraph)",
+      "url": "https://education.siggraph.org/static/HyperGraph/animation/character_animation/motion_capture/history1.htm"
+    },
+    {
+      "title": "About Oxford Metrics",
+      "publisher": "Oxford Metrics",
+      "url": "https://oxfordmetrics.com/about"
+    },
+    {
+      "title": "The Standard: Vicon's 30th birthday edition (2014)",
+      "publisher": "Vicon",
+      "url": "https://www.vicon.com/wp-content/uploads/2019/05/vicon-standard-2014.pdf"
+    },
+    {
+      "title": "Robert Abel and Associates",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Robert_Abel_and_Associates"
+    },
+    {
+      "title": "This pioneering work of CG animation premiered during the 1985 Super Bowl",
+      "publisher": "Cartoon Brew",
+      "url": "https://www.cartoonbrew.com/cgi/this-pioneering-work-of-cg-animation-premiered-during-the-1985-super-bowl-150585.html"
+    },
+    {
+      "title": "Sinbad: Beyond the Veil of Mists",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sinbad:_Beyond_the_Veil_of_Mists"
+    },
+    {
+      "title": "The Two Towers: Face to Face With Gollum",
+      "publisher": "Animation World Network",
+      "url": "https://www.awn.com/animationworld/two-towers-face-face-gollum"
+    },
+    {
+      "title": "All Aboard the CG Polar Express",
+      "publisher": "Animation World Network",
+      "url": "https://www.awn.com/vfxworld/all-aboard-cg-polar-express"
+    },
+    {
+      "title": "The Polar Express (film)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Polar_Express_(film)"
+    },
+    {
+      "title": "King Kong (2005 film)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/King_Kong_(2005_film)"
+    },
+    {
+      "title": "Rise of the Planet of the Apes",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rise_of_the_Planet_of_the_Apes"
+    },
+    {
+      "title": "Kochadaiiyaan",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kochadaiiyaan"
+    },
+    {
+      "title": "Ninja Theory and Epic Games talk Hellblade and the future of real-time",
+      "publisher": "ACM SIGGRAPH Blog",
+      "url": "https://blog.siggraph.org/2016/10/ninja-theory-epic-games-talk-hellblade-future-real-time.html/"
+    },
+    {
+      "title": "Cao et al., OpenPose: Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/1812.08008"
+    },
+    {
+      "title": "On-device, real-time body pose tracking with MediaPipe BlazePose",
+      "publisher": "Google Research",
+      "url": "https://research.google/blog/on-device-real-time-body-pose-tracking-with-mediapipe-blazepose/"
+    },
+    {
+      "title": "ARFaceAnchor.BlendShapeLocation",
+      "publisher": "Apple Developer",
+      "url": "https://developer.apple.com/documentation/arkit/arfaceanchor/blendshapelocation"
+    },
+    {
+      "title": "Roetenberg, Luinge & Slycke, Xsens MVN: Full 6DOF human motion tracking using miniature inertial sensors",
+      "publisher": "Xsens Technologies",
+      "url": "https://www.researchgate.net/publication/239920367_Xsens_MVN_Full_6DOF_human_motion_tracking_using_miniature_inertial_sensors"
+    },
+    {
+      "title": "Merriaux et al. (2017), A Study of Vicon System Positioning Performance, Sensors 17(7)",
+      "publisher": "PubMed Central (NIH)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5551098/"
+    },
+    {
+      "title": "How Avatar: The Way of Water revolutionizes underwater cinematography",
+      "publisher": "The Walt Disney Company",
+      "url": "https://thewaltdisneycompany.com/news/how-avatar-the-way-of-water-revolutionizes-underwater-cinematography/"
+    },
+    {
+      "title": "Avatar (2009 film)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Avatar_(2009_film)"
+    },
+    {
+      "title": "Xsens motion capture for Indian blockbuster Adipurush",
+      "publisher": "Xsens",
+      "url": "https://www.xsens.com/news/xsens-motion-capture-for-indian-blockbuster-adipurush"
+    },
+    {
+      "title": "Nakano et al. (2020), Evaluation of 3D markerless motion capture accuracy using OpenPose with multiple video cameras",
+      "publisher": "Frontiers in Sports and Active Living (PMC)",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7739760/"
+    },
+    {
+      "title": "The Lord of the Rings: The Two Towers",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Two_Towers"
+    },
+    {
+      "title": "Gunnar Johansson (psychophysicist)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gunnar_Johansson_(psychophysicist)"
+    },
+    {
+      "title": "Adipurush",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Adipurush"
+    },
+    {
+      "title": "Final Fantasy: The Spirits Within",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Final_Fantasy:_The_Spirits_Within"
+    },
+    {
+      "title": "Virtua Fighter 2",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Virtua_Fighter_2"
+    },
+    {
+      "title": "Snow White and the Seven Dwarfs (1937 film)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(1937_film)"
+    },
+    {
+      "title": "Eadweard Muybridge",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Eadweard_Muybridge"
+    }
+  ]
+}
